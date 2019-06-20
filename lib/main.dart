@@ -3,7 +3,7 @@ import 'loginScreen.dart';
 void main() {
   runApp(MaterialApp(
     title: "STEM Guide",
-    home: LoginScreew(),
+    home: LoginScreen(),
     routes: {
 //      'home':(context) => home(),
     },

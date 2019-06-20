@@ -13,11 +13,7 @@ class AppColors {
 }
 
 class IconImage {
-  static const String user = "assets/icons/user.png";
   static const String location =  "assets/icons/location.png";
-  static const String compass =  "assets/icons/compass.png";
-  static const String controls =  "assets/icons/controls.png";
-  static const String sun =  "assets/icons/sun.png";
 }
 
 class ProfileImages {

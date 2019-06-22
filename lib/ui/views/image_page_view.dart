@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:extended_image/extended_image.dart';
-import 'package:stem_guide/models/image.dart';
+import 'package:stem_guide/core/models/image.dart';
+import 'package:stem_guide/core/models/school.dart';
 
-class ImagePageView extends StatelessWidget {
-  final ImageModel imageModel;
-  const ImagePageView({Key key, image})
-      : imageModel = image,
-        super(key: key);
+class GalleryPageView extends StatelessWidget {
+  final School school;
+  final String department;
+  final int startingIndex;
+  const GalleryPageView(
+      {Key key, this.school, this.department, this.startingIndex})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ExtendedImageGesturePageView.builder(
       itemBuilder: (BuildContext context, int index) {
         var newImage =
-            ImageModel(imageModel.school, imageModel.department, index);
+            ImageModel(school: school, department: department, index: index);
 
         Widget image = ExtendedImage.asset(
           newImage.path,
@@ -29,8 +32,8 @@ class ImagePageView extends StatelessWidget {
           ),
         );
       },
-      itemCount: imageModel.school.imagesNum,
-      controller: PageController(initialPage: imageModel.index),
+      itemCount: school.imagesNum,
+      controller: PageController(initialPage: startingIndex),
       scrollDirection: Axis.horizontal,
     );
   }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:extended_image/extended_image.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:stem_guide/core/models/image.dart';
 import 'package:stem_guide/core/models/school.dart';
@@ -21,12 +20,11 @@ class GalleryView extends StatelessWidget {
         title: Text("${school.name}'s $department!"),
       ),
       body: StaggeredGridView.countBuilder(
-        crossAxisCount: 6,
-        crossAxisSpacing: 1.0,
-        mainAxisSpacing: 1.0,
-        itemBuilder: (context, index) {
-          return _buildImage(context, index);
-        },
+        padding: EdgeInsets.symmetric(horizontal: 8.0),
+        crossAxisCount: 4,
+        crossAxisSpacing: 3.5,
+        mainAxisSpacing: 3.5,
+        itemBuilder: (context, index) => _buildImage(context, index),
         itemCount: school.imagesNum,
         staggeredTileBuilder: (_) => StaggeredTile.fit(2),
       ),
@@ -46,9 +44,15 @@ class GalleryView extends StatelessWidget {
               startingIndex: index,
             ));
       },
-      child: Hero(
-        tag: imageModel.path,
-        child: ExtendedImage.asset(imageModel.path),
+      child: ClipRRect(
+        borderRadius: BorderRadius.all(
+          Radius.circular(5.0),
+        ),
+        child: Hero(
+            tag: imageModel.path,
+            child: Image.asset(
+              imageModel.path,
+            )),
       ),
     );
   }

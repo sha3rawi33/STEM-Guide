@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "498739743812",
+    "firebase_url": "https://stem-guide.firebaseio.com",
+    "project_id": "stem-guide",
+    "storage_bucket": "stem-guide.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498739743812:android:9de1df327ae1005c",
+        "android_client_info": {
+          "package_name": "com.plebits.stem_guide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498739743812-qbbh6113hdvaptcrdfnb6abrj065u02e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADDqJiSRSbpb5HwMtZvJ7ePmQAdSJ-PE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498739743812-qbbh6113hdvaptcrdfnb6abrj065u02e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

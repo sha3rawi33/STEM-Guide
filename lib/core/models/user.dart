@@ -1,6 +1,11 @@
+import 'package:stem_guide/core/models/school.dart';
+
 class User {
-  int id;
-  String name;
-  String username;
-  User({this.id, this.name, this.username});
+  final String uid;
+  final String name;
+  final String email;
+  final String photoUrl;
+  final School school;
+  final int grade;
+  const User({this.uid, this.name, this.email, this.school, this.photoUrl, this.grade});
 }
